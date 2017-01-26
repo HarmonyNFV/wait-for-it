@@ -24,7 +24,7 @@ USAGE
 
 wait_for()
 {
-    sleep 60
+    
     if [[ $TIMEOUT -gt 0 ]]; then
         echoerr "$cmdname: waiting $TIMEOUT seconds for $HOST:$PORT"
     else
@@ -132,11 +132,11 @@ if [[ "$HOST" == "" || "$PORT" == "" ]]; then
     usage
 fi
 
-TIMEOUT=${TIMEOUT:-15}
+TIMEOUT=${TIMEOUT:-90}
 STRICT=${STRICT:-0}
 CHILD=${CHILD:-0}
 QUIET=${QUIET:-0}
-
+sleep 60
 if [[ $CHILD -gt 0 ]]; then
     wait_for
     RESULT=$?
