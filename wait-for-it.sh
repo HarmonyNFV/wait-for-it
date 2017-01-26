@@ -136,7 +136,7 @@ TIMEOUT=${TIMEOUT:-90}
 STRICT=${STRICT:-0}
 CHILD=${CHILD:-0}
 QUIET=${QUIET:-0}
-sleep 60
+sleep 120
 if [[ $CHILD -gt 0 ]]; then
     wait_for
     RESULT=$?
