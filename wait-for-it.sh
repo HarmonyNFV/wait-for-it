@@ -24,6 +24,7 @@ USAGE
 
 wait_for()
 {
+    sleep 60
     if [[ $TIMEOUT -gt 0 ]]; then
         echoerr "$cmdname: waiting $TIMEOUT seconds for $HOST:$PORT"
     else
