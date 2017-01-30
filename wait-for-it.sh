@@ -132,12 +132,11 @@ if [[ "$HOST" == "" || "$PORT" == "" ]]; then
     usage
 fi
 
-TIMEOUT=${TIMEOUT:-90}
+TIMEOUT=${TIMEOUT:-180}
 STRICT=${STRICT:-0}
 CHILD=${CHILD:-0}
 QUIET=${QUIET:-0}
-echo "sleep 120 seconds before polling the service"
-sleep 120
+echo "Poll service timeout - $TIMEOUT"
 if [[ $CHILD -gt 0 ]]; then
     wait_for
     RESULT=$?
